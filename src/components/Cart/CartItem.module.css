@@ -1,0 +1,51 @@
+.item {
+  background-color: rgba(80, 80, 80, 0.719);
+  padding: 10px;
+  border-radius: 5px;
+  margin: 10px 0;
+  color: aliceblue;
+}
+
+.item .header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.item .header .price {
+  font-style: italic;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.item .details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.item .details .actions {
+  width: 90px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.item .details .quantity span {
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.item .details .actions button {
+  padding: 5px 15px;
+  font-size: 20px;
+  border: 1px solid aliceblue;
+  border-radius: 4px;
+  color: aliceblue;
+  background-color: transparent;
+  transition: all 0.4s;
+}
+
+.item .details .actions button:hover {
+  background-color: rgba(0, 0, 0, 0.356);
+  transition: all 0.4s;
+}

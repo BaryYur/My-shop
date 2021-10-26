@@ -1,0 +1,36 @@
+.item-container {
+    min-height: 120px;
+    border: 1px solid indianred;
+    margin: 8px 0;
+    border-radius: 5px;
+    padding: 15px;
+}
+
+.item__header {
+    display: flex;
+    font-size: 22px;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.item__header div:last-child {
+    background-color: rgb(78, 78, 78);
+    color: white;
+    padding: 6px;
+    border-radius: 8px;
+}
+
+.item-container button {
+    padding: 10px 15px;
+    font-size: 17px;
+    font-weight: 500;
+    border: none;
+    background-color: indianred;
+    color: white;
+}
+
+.item__header div p:last-child {
+    font-style: italic;
+    color: rgb(102, 102, 102);
+}
