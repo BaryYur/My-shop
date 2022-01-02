@@ -7,6 +7,7 @@ import './Cart.css';
 
 function Cart(props) {
     const cartItems = useSelector((state) => state.cart.items);
+    const showParagraph = useSelector(state => state.cart.show);
 
     return (
     <React.Fragment>
@@ -14,6 +15,7 @@ function Cart(props) {
        <div onClick={props.onClose} className="wrapper-cart"></div>
        <div className="cart-box">
         <p>Your items</p>
+        {!showParagraph && <p>Your cart is empty</p>}
         <ul>
         {cartItems.map((item) => (
           <CartItem
