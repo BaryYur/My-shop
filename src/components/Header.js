@@ -12,7 +12,7 @@ function Header(props) {
   const [showCart, setShowCart] = useState(false);
   const cartQuantity = useSelector((state) => state.cart.totalQuantity);
 
-  if(cartQuantity > 0) {
+  if (cartQuantity > 0) {
     dispatch(cartActions.visible());
   } else {
     dispatch(cartActions.invisible());
@@ -20,18 +20,20 @@ function Header(props) {
 
   return ( 
     <React.Fragment>
-        {showCart &&
-          <Cart onClose={() => setShowCart(false)} />
-        }
+      {showCart &&
+        <Cart onClose={() => setShowCart(false)} />
+      }
       <header>
         <h1>React App</h1>
         <button type="button" onClick={() => setShowCart(a => !a)} className="button-cart">
           <span>Cart</span>
-          {showCounter && <span className="b-circle">{cartQuantity}</span>}
+          <span className={showCounter ? "in-b-circle" : "b-circle"}>{cartQuantity}</span>
         </button>
       </header>
     </React.Fragment>
   );
 }
+
+export default Header;
 
 export default Header;
